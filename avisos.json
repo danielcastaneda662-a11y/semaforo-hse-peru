@@ -1,7 +1,7 @@
 {
-  "checked_at": null,
+  "checked_at": "2026-11-16T08:57:00.723268-05:00",
   "source": "https://web2.senamhi.gob.pe/?p=avisos",
-  "source_status": "pending",
+  "source_status": "unavailable",
   "advisories": [],
-  "note": "La consulta programada aún no ha terminado su primera ejecución. No hay niveles locales verificados."
+  "note": "Error consultando SENAMHI: HTTPSConnectionPool(host='web2.senamhi.gob.pe', port=443): Max retries exceeded with url: /?p=avisos (Caused by ConnectTimeoutError(<HTTPSCo"
 }
