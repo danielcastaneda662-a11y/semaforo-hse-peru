@@ -1,0 +1,25 @@
+{
+  "checked_at": null,
+  "data_status": "unverified",
+  "explanation": "Incidencias de referencia pendientes de validación vigente. Los enlaces a los visores permiten consultar el estado actual.",
+  "reported_incidents": [
+    {
+      "zone": "Piura",
+      "location": "Sierra de Piura, límite con Cajamarca",
+      "road": "Longitudinal de la Sierra Norte, km 68",
+      "reported_status": "RESTRINGIDO",
+      "current_status": "POR CONFIRMAR",
+      "source_url": "https://andina.pe/agencia/noticia-fenomeno-nino-sutran-reporta-22-alertas-viales-eventos-naturales-1098401.aspx",
+      "note": "Reporte anterior; verificar estado actual en SUTRAN."
+    },
+    {
+      "zone": "Oriente",
+      "location": "Padre Abad, Ucayali",
+      "road": "Carretera Federico Basadre, km 441",
+      "reported_status": "INTERRUMPIDO",
+      "current_status": "POR CONFIRMAR",
+      "source_url": "https://andina.pe/agencia/noticia-fenomeno-nino-sutran-reporta-22-alertas-viales-eventos-naturales-1098401.aspx",
+      "note": "Reporte anterior; verificar estado actual en SUTRAN."
+    }
+  ]
+}
