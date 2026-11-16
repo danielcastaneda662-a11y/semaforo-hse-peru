@@ -4,6 +4,7 @@
 <script>
 const Z=[
 {name:"Piura",region:"PIURA",numbers:[465,467],what:"Temperatura diurna en costa y sierra; precipitaciones previstas en costa norte, especialmente en sectores del interior de Piura.",act:"Revisar quebradas y rutas susceptibles a aniegos. Agua, pausas a la sombra y comunicación con supervisor."},
+{name:"Cajamarca / Jaén",region:"CAJAMARCA",numbers:[465,467],what:"Avisos de calor y precipitaciones que incluyen sectores del departamento de Cajamarca. Verificar específicamente Jaén y sus vías de acceso; no asumir bloqueos vigentes sin confirmación oficial.",act:"Antes de salir hacia Jaén, verificar transitabilidad en SUTRAN/MTC. Si hay interrupción confirmada en la ruta, no circular por ese tramo y coordinar alternativa segura."},
 {name:"Chiclayo",region:"LAMBAYEQUE",numbers:[465,467],what:"Temperatura diurna y precipitaciones en sectores del norte. La afectación de Chiclayo debe comprobarse en los mapas diarios.",act:"Revisar puentes, vías y zonas inundables antes de salir; no cruzar cauces con agua."},
 {name:"Trujillo",region:"LA LIBERTAD",numbers:[465,467],what:"Incremento de temperatura diurna y precipitaciones previstas en sectores de sierra; no asumir lluvias fuertes en toda la ciudad.",act:"Confirmar condiciones de rutas hacia sierra y quebradas. Hidratarse y reportar ubicación."},
 {name:"Norte Chico",region:"LIMA",numbers:[465,467,470],what:"Avisos por temperatura, precipitaciones en sectores de sierra y viento en costa centro. Verificar Huacho y Barranca por separado.",act:"Revisar visibilidad, vías, quebradas y pronóstico antes de desplazamientos."},
@@ -21,7 +22,7 @@ const FIXED=[
 {number:469,title:"Incremento de temperatura diurna en selva",level:"ROJO",start:"2026-11-16",end:"2026-11-18",departments:["AMAZONAS","CAJAMARCA","CUSCO","HUANUCO","JUNIN","LORETO","MADRE DE DIOS","PASCO","PUNO","SAN MARTIN","UCAYALI"]},
 {number:470,title:"Incremento de viento en costa centro y sur",level:"NARANJA",start:"2026-11-16",end:"2026-11-18",departments:["AREQUIPA","CALLAO","ICA","LIMA","MOQUEGUA","TACNA"]}
 ];
-const REGION={"Piura":["PIURA"],"Chiclayo":["LAMBAYEQUE"],"Trujillo":["LA LIBERTAD"],"Norte Chico":["LIMA"],"Sur Chico":["LIMA","ICA"],"Lima Norte y Sur":["LIMA"],"Cusco":["CUSCO"],"Arequipa":["AREQUIPA"],"Huancayo":["JUNIN"],"Oriente":["UCAYALI","LORETO","SAN MARTIN"]};
+const REGION={"Piura":["PIURA"],"Chiclayo":["LAMBAYEQUE"],"Cajamarca / Jaén":["CAJAMARCA"],"Trujillo":["LA LIBERTAD"],"Norte Chico":["LIMA"],"Sur Chico":["LIMA","ICA"],"Lima Norte y Sur":["LIMA"],"Cusco":["CUSCO"],"Arequipa":["AREQUIPA"],"Huancayo":["JUNIN"],"Oriente":["UCAYALI","LORETO","SAN MARTIN"]};
 let current=FIXED;let feedOk=false;let stamp="";let geo={};let geoStatus="";const nowPeru=()=>new Date().toLocaleDateString("en-CA",{timeZone:"America/Lima"});const clean=s=>String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));function render(){
 const today=nowPeru();document.getElementById("headline").textContent="HSE · "+new Date().toLocaleDateString("es-PE",{timeZone:"America/Lima",dateStyle:"full"})+" · Semáforo por departamento según boletín COEN/SENAMHI del 15/11/2026";
 const rank={ROJO:3,NARANJA:2,AMARILLO:1};const classes={ROJO:"red",NARANJA:"orange",AMARILLO:"yellow"};
