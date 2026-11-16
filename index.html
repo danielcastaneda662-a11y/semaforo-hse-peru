@@ -28,6 +28,8 @@ const rank={ROJO:3,NARANJA:2,AMARILLO:1};const classes={ROJO:"red",NARANJA:"oran
 document.getElementById("body").innerHTML=Z.map(z=>{
 const depts=REGION[z.name]||[];
 const matches=FIXED.filter(a=>a.start<=today&&a.end>=today&&a.departments.some(d=>depts.includes(d)));
+const shortRain319=z.name==="Piura"&&Date.now()>=Date.parse("2026-11-15T13:00:00-05:00")&&Date.now()<Date.parse("2026-11-16T13:00:00-05:00");
+if(shortRain319)matches.push({number:319,title:"Lluvias de fuerte a extrema intensidad en sectores de Piura — aviso de corto plazo (15/11 13:00 a 16/11 13:00)",level:"ROJO",start:"2026-11-15",end:"2026-11-16",departments:["PIURA"]});
 const official=matches.slice().sort((a,b)=>rank[b.level]-rank[a.level])[0]?.level||"";
 const rain=matches.filter(a=>/PRECIPIT|LLUVIA|GRANIZ|NEVAD/i.test(a.title));
 const wind=matches.filter(a=>/VIENTO/i.test(a.title));
@@ -36,7 +38,7 @@ const rainExtreme=rain.some(a=>a.level==="ROJO");
 const rainHigh=rain.some(a=>a.level==="NARANJA");
 const verifiedRoadBlock=(roadsData.reported_incidents||[]).some(e=>e.zone===z.name&&e.current_status==="INTERRUMPIDO"&&e.verified===true);
 const level=rainExtreme||verifiedRoadBlock||wind.some(a=>a.level==="ROJO")?"ROJO":rainHigh||wind.some(a=>a.level==="NARANJA")?"NARANJA":matches.length?"AMARILLO":"";
-const rationale=rainExtreme?"ROJO SST por aviso de lluvias extremas: suspender desplazamientos por tramos expuestos a inundación, huaicos o quebradas activas, incluso sin bloqueo reportado.":verifiedRoadBlock?"ROJO SST por interrupción vial verificada: no transitar por el tramo afectado.":rain.length?"Alerta SST: evaluar accesos, quebradas y carreteras por lluvias.":wind.length?"Alerta SST: verificar visibilidad y exposición al viento.":heat.length?"Alerta SST por calor: hidratación, bloqueador, gorro y pausas; evaluar condiciones de cada trabajador.":"Sin información suficiente para evaluar rutas.";
+const rationale=rainExtreme?"ROJO SST por aviso de lluvias extremas: suspender desplazamientos por tramos expuestos a inundación, huaicos o quebradas activas, incluso sin bloqueo reportado. Confirmar localidad y ruta específica.":verifiedRoadBlock?"ROJO SST por interrupción vial verificada: no transitar por el tramo afectado.":rain.length?"Alerta SST: evaluar accesos, quebradas y carreteras por lluvias.":wind.length?"Alerta SST: verificar visibilidad y exposición al viento.":heat.length?"Alerta SST por calor: hidratación, bloqueador, gorro y pausas; evaluar condiciones de cada trabajador.":"Sin información suficiente para evaluar rutas.";
 const focusByZone={
 "Piura":"SENAMHI 467 identifica la costa interior de Piura como zona de mayor atención por lluvias. Revisar rutas hacia Tambogrande, Chulucanas/Morropón, Sullana, Ayabaca y Huancabamba según destino. Son puntos de comprobación, NO localidades con bloqueo confirmado.",
 "Chiclayo":"Verificar rutas hacia Ferreñafe y Olmos según destino; no hay interrupción específica confirmada en este reporte.",
