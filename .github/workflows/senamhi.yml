@@ -15,9 +15,10 @@ jobs:
           python-version: '3.12'
       - run: pip install requests==2.32.3 beautifulsoup4==4.12.3
       - run: python scripts/consultar_senamhi.py
+      - run: python scripts/consultar_vias.py
       - name: Guardar resultados
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add avisos.json
+          git add avisos.json vias.json
           git diff --cached --quiet || (git commit -m "Actualizar consulta de avisos SENAMHI" && git push)
