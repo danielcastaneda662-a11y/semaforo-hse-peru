@@ -1,7 +1,59 @@
 {
-  "checked_at": "2026-11-16T08:57:59.967496-05:00",
-  "source": "https://web2.senamhi.gob.pe/?p=avisos",
-  "source_status": "unavailable",
+  "checked_at": "2026-11-16T18:44:58.271679-05:00",
+  "source": "https://geosinpad.indeci.gob.pe/indeci/rest/services/Ent_Tecnico_Cientificas/SENAMHI/MapServer/5",
+  "source_status": "parsed",
   "advisories": [],
-  "note": "Error consultando SENAMHI: HTTPSConnectionPool(host='web2.senamhi.gob.pe', port=443): Max retries exceeded with url: /?p=avisos (Caused by ConnectTimeoutError(<HTTPSCo"
+  "zones": {
+    "Piura": {
+      "rain24h": [],
+      "checked_points": 1,
+      "verified_points": 1
+    },
+    "Chiclayo": {
+      "rain24h": [],
+      "checked_points": 1,
+      "verified_points": 2
+    },
+    "Trujillo": {
+      "rain24h": [],
+      "checked_points": 1,
+      "verified_points": 3
+    },
+    "Norte Chico": {
+      "rain24h": [],
+      "checked_points": 2,
+      "verified_points": 5
+    },
+    "Sur Chico": {
+      "rain24h": [],
+      "checked_points": 2,
+      "verified_points": 7
+    },
+    "Lima Norte y Sur": {
+      "rain24h": [],
+      "checked_points": 2,
+      "verified_points": 9
+    },
+    "Cusco": {
+      "rain24h": [],
+      "checked_points": 1,
+      "verified_points": 10
+    },
+    "Arequipa": {
+      "rain24h": [],
+      "checked_points": 1,
+      "verified_points": 11
+    },
+    "Huancayo": {
+      "rain24h": [],
+      "checked_points": 1,
+      "verified_points": 12
+    },
+    "Oriente": {
+      "rain24h": [],
+      "checked_points": 3,
+      "verified_points": 15
+    }
+  },
+  "note": "Consulta de capa SENAMHI/INDECI de precipitaciones 24h: 15 de 15 puntos respondieron. No certifica ausencia de otros avisos."
 }
