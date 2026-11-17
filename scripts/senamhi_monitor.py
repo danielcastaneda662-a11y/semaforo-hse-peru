@@ -5,7 +5,7 @@ import pathlib
 import re
 import urllib.request
 
-URL = "https://www.senamhi.gob.pe/?p=aviso-meteorologico"
+URL = "https://www.senamhi.gob.pe/?p=avisos-meteorologicos"
 OUT = pathlib.Path("data/senamhi-status.json")
 now = datetime.datetime.now(datetime.timezone.utc).isoformat()
 record = {"source": URL, "checked_at_utc": now, "status": "unverified",
