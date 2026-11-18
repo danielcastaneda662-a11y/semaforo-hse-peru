@@ -1,40 +1,74 @@
-"""Monitor de disponibilidad SENAMHI. No infiere niveles ni localidades."""
+"""Consulta automática de capas SENAMHI publicadas por INDECI.
+Las capas de 24h no equivalen al inventario nacional de avisos meteorológicos.
+"""
 import datetime
 import json
 import pathlib
-import re
-import urllib.request
 import time
+import urllib.parse
+import urllib.request
 
-URL = "https://www.senamhi.gob.pe/?p=avisos-meteorologicos"
+BASE = "https://geosinpad.indeci.gob.pe/indeci/rest/services/Ent_Tecnico_Cientificas/SENAMHI/MapServer"
 OUT = pathlib.Path("data/senamhi-status.json")
-now = datetime.datetime.now(datetime.timezone.utc).isoformat()
-record = {"source": URL, "checked_at_utc": now, "status": "unverified",
-          "message": "Avisos no verificados: no asignar colores oficiales."}
-errors = []
-for attempt in range(3):
-    try:
-        request = urllib.request.Request(URL, headers={
-            "User-Agent": "Mozilla/5.0 (compatible; HSE-Semaforo/1.0)",
-            "Accept": "text/html,application/xhtml+xml",
-            "Accept-Language": "es-PE,es;q=0.9"
-        })
-        with urllib.request.urlopen(request, timeout=25) as response:
-            html = response.read(3_000_000).decode("utf-8", errors="replace")
-        if re.search(r"avisos meteorol[oó]gicos", html, re.IGNORECASE):
-            record["status"] = "source_reachable"
-            record["message"] = "Portal accesible. Extracción y cobertura geográfica de avisos pendientes de validar."
-        else:
-            record["message"] = "Respuesta inesperada del portal SENAMHI; avisos no verificados."
-        break
-    except Exception as exc:
-        errors.append(type(exc).__name__)
-        if attempt < 2:
-            time.sleep(2 * (attempt + 1))
-else:
-    record["message"] = "SENAMHI no respondió después de tres intentos. No implica ausencia de avisos."
-    record["error_type"] = ", ".join(errors)
+POINTS = {
+    "Piura": [(-80.63, -5.19)],
+    "Chiclayo": [(-79.84, -6.77)],
+    "Trujillo": [(-79.03, -8.11)],
+    "Norte Chico": [(-77.61, -11.11), (-77.76, -10.75)],
+    "Sur Chico": [(-76.38, -13.08), (-74.94, -14.83)],
+    "Lima Norte y Sur": [(-77.06, -11.92), (-76.93, -12.18)],
+    "Cusco": [(-71.97, -13.53)],
+    "Arequipa": [(-71.54, -16.40)],
+    "Huancayo": [(-75.21, -12.07)],
+    "Oriente": [(-74.55, -8.38), (-73.25, -3.75), (-76.37, -6.49)]
+}
+LAYERS = {2: "quebradas_24h", 3: "incendios_24h", 4: "hidrologia_24h", 5: "precipitacion_24h"}
 
-OUT.parent.mkdir(parents=True, exist_ok=True)
-OUT.write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-print(record["status"], record["message"])
+def query(layer, lon, lat):
+    params = urllib.parse.urlencode({
+        "f": "json", "geometry": f"{lon},{lat}", "geometryType": "esriGeometryPoint",
+        "inSR": "4326", "spatialRel": "esriSpatialRelIntersects",
+        "outFields": "*", "returnGeometry": "false"
+    })
+    req = urllib.request.Request(f"{BASE}/{layer}/query?{params}",
+        headers={"User-Agent": "Mozilla/5.0 (compatible; HSE-Semaforo/1.0)"})
+    with urllib.request.urlopen(req, timeout=18) as response:
+        payload = json.load(response)
+    if "error" in payload or "features" not in payload:
+        raise ValueError("Respuesta ArcGIS inválida")
+    return [f.get("attributes", {}) for f in payload["features"]]
+
+def main():
+    stamp = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    result = {"source": BASE, "checked_at_utc": stamp, "status": "unverified",
+              "message": "Capas SENAMHI/INDECI sin verificar.",
+              "scope": "Capas geográficas 24h; NO inventario nacional de avisos.",
+              "zones": {}, "layers": {}, "national_advisories_verified": False}
+    ok = 0
+    for layer, name in LAYERS.items():
+        successful, failures = 0, 0
+        for zone, coords in POINTS.items():
+            result["zones"].setdefault(zone, {})
+            hits = []
+            for lon, lat in coords:
+                try:
+                    hits.extend(query(layer, lon, lat))
+                    successful += 1
+                except Exception:
+                    failures += 1
+            # No interpretar vacío como ausencia de peligro si hubo errores.
+            result["zones"][zone][name] = {
+                "features": hits[:15], "points_ok": successful,
+                "coverage": "partial" if failures else "queried"
+            } if successful else {"features": [], "coverage": "unavailable"}
+        result["layers"][name] = {"successful_queries": successful, "failed_queries": failures}
+        ok += successful
+    result["status"] = "source_reachable" if ok else "unverified"
+    result["message"] = ("Capas oficiales consultadas; avisos nacionales todavía no verificados."
+                         if ok else "No fue posible consultar las capas oficiales.")
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(result["status"], result["layers"])
+
+if __name__ == "__main__":
+    main()
