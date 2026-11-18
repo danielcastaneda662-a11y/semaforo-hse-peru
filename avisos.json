@@ -1,18 +1,11 @@
 {
-  "checked_at": "2026-11-18T06:45:26.128316-05:00",
+  "checked_at": "2026-11-18T15:34:15.933631-05:00",
   "source": "https://geosinpad.indeci.gob.pe/indeci/rest/services/Ent_Tecnico_Cientificas/SENAMHI/MapServer/5",
   "source_status": "parsed",
   "advisories": [],
   "zones": {
     "Piura": {
-      "rain24h": [
-        {
-          "level": "AMARILLO",
-          "date": "2026-11-16T19:00:00-05:00",
-          "description": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-          "recommendation": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes."
-        }
-      ],
+      "rain24h": [],
       "checked_points": 1,
       "verified_points": 1
     },
@@ -37,7 +30,14 @@
       "verified_points": 7
     },
     "Lima Norte y Sur": {
-      "rain24h": [],
+      "rain24h": [
+        {
+          "level": "AMARILLO",
+          "date": "2026-11-17T19:00:00-05:00",
+          "description": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
+          "recommendation": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes."
+        }
+      ],
       "checked_points": 2,
       "verified_points": 9
     },
