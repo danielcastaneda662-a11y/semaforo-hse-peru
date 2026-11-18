@@ -22,7 +22,7 @@ POINTS = {
     "Huancayo": [(-75.21, -12.07)],
     "Oriente": [(-74.55, -8.38), (-73.25, -3.75), (-76.37, -6.49)]
 }
-LAYERS = {2: "quebradas_24h", 3: "incendios_24h", 4: "hidrologia_24h", 5: "precipitacion_24h"}
+LAYERS = {2: "quebradas_24h", 5: "precipitacion_24h"}
 
 def query(layer, lon, lat):
     params = urllib.parse.urlencode({
@@ -50,17 +50,21 @@ def main():
         for zone, coords in POINTS.items():
             result["zones"].setdefault(zone, {})
             hits = []
+            zone_success = 0
+            zone_failures = 0
             for lon, lat in coords:
                 try:
                     hits.extend(query(layer, lon, lat))
                     successful += 1
+                    zone_success += 1
                 except Exception:
                     failures += 1
+                    zone_failures += 1
             # No interpretar vacío como ausencia de peligro si hubo errores.
             result["zones"][zone][name] = {
-                "features": hits[:15], "points_ok": successful,
-                "coverage": "partial" if failures else "queried"
-            } if successful else {"features": [], "coverage": "unavailable"}
+                "features": hits[:15], "points_ok": zone_success,
+                "coverage": "partial" if zone_failures else "queried"
+            } if zone_success else {"features": [], "coverage": "unavailable"}
         result["layers"][name] = {"successful_queries": successful, "failed_queries": failures}
         ok += successful
     result["status"] = "source_reachable" if ok else "unverified"
