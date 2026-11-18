@@ -1,6 +1,6 @@
 {
   "source": "https://www.senamhi.gob.pe/?p=avisos-meteorologicos",
-  "checked_at_utc": "2026-11-18T04:41:15.988063+00:00",
+  "checked_at_utc": "2026-11-18T13:50:35.572316+00:00",
   "status": "unverified",
   "message": "No se pudo consultar el portal SENAMHI.",
   "error_type": "URLError"
