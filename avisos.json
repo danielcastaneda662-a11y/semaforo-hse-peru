@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-11-17T13:36:24.385617-05:00",
+  "checked_at": "2026-11-17T21:55:13.509538-05:00",
   "source": "https://geosinpad.indeci.gob.pe/indeci/rest/services/Ent_Tecnico_Cientificas/SENAMHI/MapServer/5",
-  "source_status": "parsed",
+  "source_status": "partial",
   "advisories": [],
   "zones": {
     "Piura": {
@@ -29,38 +29,43 @@
     "Norte Chico": {
       "rain24h": [],
       "checked_points": 2,
-      "verified_points": 5
+      "verified_points": 4
     },
     "Sur Chico": {
       "rain24h": [],
       "checked_points": 2,
-      "verified_points": 7
+      "verified_points": 6
     },
     "Lima Norte y Sur": {
       "rain24h": [],
       "checked_points": 2,
-      "verified_points": 9
+      "verified_points": 7
     },
     "Cusco": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 10
+      "verified_points": 8
     },
     "Arequipa": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 11
+      "verified_points": 9
     },
     "Huancayo": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 12
+      "verified_points": 9
     },
     "Oriente": {
       "rain24h": [],
       "checked_points": 3,
-      "verified_points": 15
+      "verified_points": 12
     }
   },
-  "note": "Consulta de capa SENAMHI/INDECI de precipitaciones 24h: 15 de 15 puntos respondieron. No certifica ausencia de otros avisos."
+  "note": "Consulta de capa SENAMHI/INDECI de precipitaciones 24h: 12 de 15 puntos respondieron. No certifica ausencia de otros avisos.",
+  "errors": [
+    "Norte Chico: ValueError: {'code': 400, 'message': 'Failed to execute query.', 'details': []}",
+    "Lima Norte y Sur: ValueError: {'code': 400, 'message': 'Failed to execute query.', 'details': []}",
+    "Huancayo: ValueError: {'code': 400, 'message': 'Failed to execute query.', 'details': []}"
+  ]
 }
