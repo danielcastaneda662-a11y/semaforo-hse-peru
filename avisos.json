@@ -1,76 +1,59 @@
 {
-  "checked_at": "2026-11-20T21:18:32.562801-05:00",
+  "checked_at": "2026-11-21T06:06:11.524006-05:00",
   "source": "https://geosinpad.indeci.gob.pe/indeci/rest/services/Ent_Tecnico_Cientificas/SENAMHI/MapServer/5",
-  "source_status": "unavailable",
+  "source_status": "parsed",
   "advisories": [],
   "zones": {
     "Piura": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 0
+      "verified_points": 1
     },
     "Chiclayo": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 0
+      "verified_points": 2
     },
     "Trujillo": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 0
+      "verified_points": 3
     },
     "Norte Chico": {
       "rain24h": [],
       "checked_points": 2,
-      "verified_points": 0
+      "verified_points": 5
     },
     "Sur Chico": {
       "rain24h": [],
       "checked_points": 2,
-      "verified_points": 0
+      "verified_points": 7
     },
     "Lima Norte y Sur": {
       "rain24h": [],
       "checked_points": 2,
-      "verified_points": 0
+      "verified_points": 9
     },
     "Cusco": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 0
+      "verified_points": 10
     },
     "Arequipa": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 0
+      "verified_points": 11
     },
     "Huancayo": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 0
+      "verified_points": 12
     },
     "Oriente": {
       "rain24h": [],
       "checked_points": 3,
-      "verified_points": 0
+      "verified_points": 15
     }
   },
-  "note": "Consulta de capa SENAMHI/INDECI de precipitaciones 24h: 0 de 15 puntos respondieron. No certifica ausencia de otros avisos.",
-  "errors": [
-    "Piura: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
-    "Chiclayo: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
-    "Trujillo: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
-    "Norte Chico: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
-    "Norte Chico: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
-    "Sur Chico: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
-    "Sur Chico: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
-    "Lima Norte y Sur: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
-    "Lima Norte y Sur: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
-    "Cusco: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
-    "Arequipa: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
-    "Huancayo: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
-    "Oriente: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
-    "Oriente: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
-    "Oriente: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti"
-  ]
+  "note": "Consulta de capa SENAMHI/INDECI de precipitaciones 24h: 15 de 15 puntos respondieron. No certifica ausencia de otros avisos."
 }
