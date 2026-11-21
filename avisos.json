@@ -1,80 +1,76 @@
 {
-  "checked_at": "2026-11-20T15:24:32.748696-05:00",
+  "checked_at": "2026-11-20T21:18:32.562801-05:00",
   "source": "https://geosinpad.indeci.gob.pe/indeci/rest/services/Ent_Tecnico_Cientificas/SENAMHI/MapServer/5",
-  "source_status": "parsed",
+  "source_status": "unavailable",
   "advisories": [],
   "zones": {
     "Piura": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 1
+      "verified_points": 0
     },
     "Chiclayo": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 2
+      "verified_points": 0
     },
     "Trujillo": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 3
+      "verified_points": 0
     },
     "Norte Chico": {
       "rain24h": [],
       "checked_points": 2,
-      "verified_points": 5
+      "verified_points": 0
     },
     "Sur Chico": {
-      "rain24h": [
-        {
-          "level": "AMARILLO",
-          "date": "2026-11-18T19:00:00-05:00",
-          "description": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-          "recommendation": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes."
-        }
-      ],
+      "rain24h": [],
       "checked_points": 2,
-      "verified_points": 7
+      "verified_points": 0
     },
     "Lima Norte y Sur": {
-      "rain24h": [
-        {
-          "level": "AMARILLO",
-          "date": "2026-11-18T19:00:00-05:00",
-          "description": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-          "recommendation": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes."
-        }
-      ],
+      "rain24h": [],
       "checked_points": 2,
-      "verified_points": 9
+      "verified_points": 0
     },
     "Cusco": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 10
+      "verified_points": 0
     },
     "Arequipa": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 11
+      "verified_points": 0
     },
     "Huancayo": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 12
+      "verified_points": 0
     },
     "Oriente": {
-      "rain24h": [
-        {
-          "level": "AMARILLO",
-          "date": "2026-11-18T19:00:00-05:00",
-          "description": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-          "recommendation": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes."
-        }
-      ],
+      "rain24h": [],
       "checked_points": 3,
-      "verified_points": 15
+      "verified_points": 0
     }
   },
-  "note": "Consulta de capa SENAMHI/INDECI de precipitaciones 24h: 15 de 15 puntos respondieron. No certifica ausencia de otros avisos."
+  "note": "Consulta de capa SENAMHI/INDECI de precipitaciones 24h: 0 de 15 puntos respondieron. No certifica ausencia de otros avisos.",
+  "errors": [
+    "Piura: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
+    "Chiclayo: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
+    "Trujillo: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
+    "Norte Chico: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
+    "Norte Chico: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
+    "Sur Chico: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
+    "Sur Chico: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
+    "Lima Norte y Sur: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
+    "Lima Norte y Sur: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
+    "Cusco: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
+    "Arequipa: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
+    "Huancayo: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
+    "Oriente: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
+    "Oriente: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti",
+    "Oriente: ReadTimeout: HTTPSConnectionPool(host='geosinpad.indeci.gob.pe', port=443): Read ti"
+  ]
 }
