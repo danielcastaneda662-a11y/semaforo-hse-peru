@@ -1,6 +1,6 @@
 {
   "source": "https://geosinpad.indeci.gob.pe/indeci/rest/services/Ent_Tecnico_Cientificas/SENAMHI/MapServer",
-  "checked_at_utc": "2026-11-22T09:42:19.750664+00:00",
+  "checked_at_utc": "2026-11-22T17:46:19.840826+00:00",
   "status": "source_reachable",
   "message": "Capas oficiales consultadas; avisos nacionales todavía no verificados.",
   "scope": "Capas geográficas 24h; NO inventario nacional de avisos.",
@@ -14,15 +14,15 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 1,
-            "NIVEL": "Nivel 1",
-            "FECHA": 1795219200000,
+            "OBJECTID": 4,
+            "NIVEL": "Nivel 2",
+            "FECHA": 1795305600000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "EROJAS",
+            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
+            "RESPONS": "JMESIA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1012396744054.17,
-            "SHAPE.LEN": 12926749.0065566
+            "SHAPE.AREA": 108202096860.656,
+            "SHAPE.LEN": 2479956.80974748
           }
         ],
         "points_ok": 1,
@@ -40,13 +40,13 @@
           {
             "OBJECTID": 1,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795219200000,
+            "FECHA": 1795305600000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "EROJAS",
+            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
+            "RESPONS": "JMESIA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1012396744054.17,
-            "SHAPE.LEN": 12926749.0065566
+            "SHAPE.AREA": 1096841649185.9,
+            "SHAPE.LEN": 12518372.1647188
           }
         ],
         "points_ok": 1,
@@ -64,13 +64,13 @@
           {
             "OBJECTID": 1,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795219200000,
+            "FECHA": 1795305600000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "EROJAS",
+            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
+            "RESPONS": "JMESIA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1012396744054.17,
-            "SHAPE.LEN": 12926749.0065566
+            "SHAPE.AREA": 1096841649185.9,
+            "SHAPE.LEN": 12518372.1647188
           }
         ],
         "points_ok": 1,
@@ -88,24 +88,24 @@
           {
             "OBJECTID": 1,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795219200000,
+            "FECHA": 1795305600000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "EROJAS",
+            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
+            "RESPONS": "JMESIA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1012396744054.17,
-            "SHAPE.LEN": 12926749.0065566
+            "SHAPE.AREA": 1096841649185.9,
+            "SHAPE.LEN": 12518372.1647188
           },
           {
             "OBJECTID": 1,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795219200000,
+            "FECHA": 1795305600000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "EROJAS",
+            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
+            "RESPONS": "JMESIA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1012396744054.17,
-            "SHAPE.LEN": 12926749.0065566
+            "SHAPE.AREA": 1096841649185.9,
+            "SHAPE.LEN": 12518372.1647188
           }
         ],
         "points_ok": 2,
@@ -123,24 +123,24 @@
           {
             "OBJECTID": 1,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795219200000,
+            "FECHA": 1795305600000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "EROJAS",
+            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
+            "RESPONS": "JMESIA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1012396744054.17,
-            "SHAPE.LEN": 12926749.0065566
+            "SHAPE.AREA": 1096841649185.9,
+            "SHAPE.LEN": 12518372.1647188
           },
           {
             "OBJECTID": 1,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795219200000,
+            "FECHA": 1795305600000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "EROJAS",
+            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
+            "RESPONS": "JMESIA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1012396744054.17,
-            "SHAPE.LEN": 12926749.0065566
+            "SHAPE.AREA": 1096841649185.9,
+            "SHAPE.LEN": 12518372.1647188
           }
         ],
         "points_ok": 2,
@@ -156,26 +156,26 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 10,
-            "NIVEL": "Nivel 2",
-            "FECHA": 1795219200000,
+            "OBJECTID": 1,
+            "NIVEL": "Nivel 1",
+            "FECHA": 1795305600000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "EROJAS",
+            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
+            "RESPONS": "JMESIA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1709340236.52251,
-            "SHAPE.LEN": 484998.16086239903
+            "SHAPE.AREA": 1096841649185.9,
+            "SHAPE.LEN": 12518372.1647188
           },
           {
-            "OBJECTID": 10,
-            "NIVEL": "Nivel 2",
-            "FECHA": 1795219200000,
+            "OBJECTID": 1,
+            "NIVEL": "Nivel 1",
+            "FECHA": 1795305600000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "EROJAS",
+            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
+            "RESPONS": "JMESIA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1709340236.52251,
-            "SHAPE.LEN": 484998.16086239903
+            "SHAPE.AREA": 1096841649185.9,
+            "SHAPE.LEN": 12518372.1647188
           }
         ],
         "points_ok": 2,
@@ -193,13 +193,13 @@
           {
             "OBJECTID": 1,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795219200000,
+            "FECHA": 1795305600000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "EROJAS",
+            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
+            "RESPONS": "JMESIA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1012396744054.17,
-            "SHAPE.LEN": 12926749.0065566
+            "SHAPE.AREA": 1096841649185.9,
+            "SHAPE.LEN": 12518372.1647188
           }
         ],
         "points_ok": 1,
@@ -217,13 +217,13 @@
           {
             "OBJECTID": 1,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795219200000,
+            "FECHA": 1795305600000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "EROJAS",
+            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
+            "RESPONS": "JMESIA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1012396744054.17,
-            "SHAPE.LEN": 12926749.0065566
+            "SHAPE.AREA": 1096841649185.9,
+            "SHAPE.LEN": 12518372.1647188
           }
         ],
         "points_ok": 1,
@@ -241,13 +241,13 @@
           {
             "OBJECTID": 1,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795219200000,
+            "FECHA": 1795305600000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "EROJAS",
+            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
+            "RESPONS": "JMESIA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1012396744054.17,
-            "SHAPE.LEN": 12926749.0065566
+            "SHAPE.AREA": 1096841649185.9,
+            "SHAPE.LEN": 12518372.1647188
           }
         ],
         "points_ok": 1,
@@ -265,35 +265,35 @@
           {
             "OBJECTID": 1,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795219200000,
+            "FECHA": 1795305600000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "EROJAS",
+            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
+            "RESPONS": "JMESIA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1012396744054.17,
-            "SHAPE.LEN": 12926749.0065566
-          },
-          {
-            "OBJECTID": 8,
-            "NIVEL": "Nivel 2",
-            "FECHA": 1795219200000,
-            "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "EROJAS",
-            "FECHA_ETL": null,
-            "SHAPE.AREA": 99372793443.3888,
-            "SHAPE.LEN": 2560301.68940436
+            "SHAPE.AREA": 1096841649185.9,
+            "SHAPE.LEN": 12518372.1647188
           },
           {
             "OBJECTID": 1,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795219200000,
+            "FECHA": 1795305600000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "EROJAS",
+            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
+            "RESPONS": "JMESIA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1012396744054.17,
-            "SHAPE.LEN": 12926749.0065566
+            "SHAPE.AREA": 1096841649185.9,
+            "SHAPE.LEN": 12518372.1647188
+          },
+          {
+            "OBJECTID": 1,
+            "NIVEL": "Nivel 1",
+            "FECHA": 1795305600000,
+            "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
+            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
+            "RESPONS": "JMESIA",
+            "FECHA_ETL": null,
+            "SHAPE.AREA": 1096841649185.9,
+            "SHAPE.LEN": 12518372.1647188
           }
         ],
         "points_ok": 3,
