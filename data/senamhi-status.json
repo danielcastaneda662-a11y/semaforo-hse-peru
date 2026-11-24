@@ -1,6 +1,6 @@
 {
   "source": "https://geosinpad.indeci.gob.pe/indeci/rest/services/Ent_Tecnico_Cientificas/SENAMHI/MapServer",
-  "checked_at_utc": "2026-11-24T12:22:13.959997+00:00",
+  "checked_at_utc": "2026-11-24T22:43:47.531453+00:00",
   "status": "source_reachable",
   "message": "Capas oficiales consultadas; avisos nacionales todavía no verificados.",
   "scope": "Capas geográficas 24h; NO inventario nacional de avisos.",
@@ -14,15 +14,15 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 7,
+            "OBJECTID": 3,
             "NIVEL": "Nivel 2",
-            "FECHA": 1795392000000,
+            "FECHA": 1795478400000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
+            "RESPONS": "GLIMAY",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 57658719065.3949,
-            "SHAPE.LEN": 2797682.54165445
+            "SHAPE.AREA": 383259667488.688,
+            "SHAPE.LEN": 6880770.47555158
           }
         ],
         "points_ok": 1,
@@ -38,15 +38,15 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 3,
+            "OBJECTID": 6,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795392000000,
+            "FECHA": 1795478400000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
+            "RESPONS": "GLIMAY",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1158750217066.88,
-            "SHAPE.LEN": 12397987.0407138
+            "SHAPE.AREA": 202233258098.489,
+            "SHAPE.LEN": 5212910.50499879
           }
         ],
         "points_ok": 1,
@@ -62,15 +62,15 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 3,
+            "OBJECTID": 6,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795392000000,
+            "FECHA": 1795478400000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
+            "RESPONS": "GLIMAY",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1158750217066.88,
-            "SHAPE.LEN": 12397987.0407138
+            "SHAPE.AREA": 202233258098.489,
+            "SHAPE.LEN": 5212910.50499879
           }
         ],
         "points_ok": 1,
@@ -86,26 +86,26 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 3,
+            "OBJECTID": 6,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795392000000,
+            "FECHA": 1795478400000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
+            "RESPONS": "GLIMAY",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1158750217066.88,
-            "SHAPE.LEN": 12397987.0407138
+            "SHAPE.AREA": 202233258098.489,
+            "SHAPE.LEN": 5212910.50499879
           },
           {
-            "OBJECTID": 3,
+            "OBJECTID": 6,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795392000000,
+            "FECHA": 1795478400000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
+            "RESPONS": "GLIMAY",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1158750217066.88,
-            "SHAPE.LEN": 12397987.0407138
+            "SHAPE.AREA": 202233258098.489,
+            "SHAPE.LEN": 5212910.50499879
           }
         ],
         "points_ok": 2,
@@ -121,26 +121,26 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 3,
+            "OBJECTID": 6,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795392000000,
+            "FECHA": 1795478400000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
+            "RESPONS": "GLIMAY",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1158750217066.88,
-            "SHAPE.LEN": 12397987.0407138
+            "SHAPE.AREA": 202233258098.489,
+            "SHAPE.LEN": 5212910.50499879
           },
           {
-            "OBJECTID": 3,
+            "OBJECTID": 6,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795392000000,
+            "FECHA": 1795478400000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
+            "RESPONS": "GLIMAY",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1158750217066.88,
-            "SHAPE.LEN": 12397987.0407138
+            "SHAPE.AREA": 202233258098.489,
+            "SHAPE.LEN": 5212910.50499879
           }
         ],
         "points_ok": 2,
@@ -156,26 +156,26 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 3,
+            "OBJECTID": 6,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795392000000,
+            "FECHA": 1795478400000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
+            "RESPONS": "GLIMAY",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1158750217066.88,
-            "SHAPE.LEN": 12397987.0407138
+            "SHAPE.AREA": 202233258098.489,
+            "SHAPE.LEN": 5212910.50499879
           },
           {
-            "OBJECTID": 3,
+            "OBJECTID": 6,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795392000000,
+            "FECHA": 1795478400000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
+            "RESPONS": "GLIMAY",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1158750217066.88,
-            "SHAPE.LEN": 12397987.0407138
+            "SHAPE.AREA": 202233258098.489,
+            "SHAPE.LEN": 5212910.50499879
           }
         ],
         "points_ok": 2,
@@ -191,15 +191,15 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 3,
+            "OBJECTID": 5,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795392000000,
+            "FECHA": 1795478400000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
+            "RESPONS": "GLIMAY",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1158750217066.88,
-            "SHAPE.LEN": 12397987.0407138
+            "SHAPE.AREA": 81269530707.7411,
+            "SHAPE.LEN": 1847271.23462692
           }
         ],
         "points_ok": 1,
@@ -215,15 +215,15 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 3,
+            "OBJECTID": 6,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795392000000,
+            "FECHA": 1795478400000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
+            "RESPONS": "GLIMAY",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1158750217066.88,
-            "SHAPE.LEN": 12397987.0407138
+            "SHAPE.AREA": 202233258098.489,
+            "SHAPE.LEN": 5212910.50499879
           }
         ],
         "points_ok": 1,
@@ -240,14 +240,14 @@
         "features": [
           {
             "OBJECTID": 3,
-            "NIVEL": "Nivel 1",
-            "FECHA": 1795392000000,
+            "NIVEL": "Nivel 2",
+            "FECHA": 1795478400000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
+            "RESPONS": "GLIMAY",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1158750217066.88,
-            "SHAPE.LEN": 12397987.0407138
+            "SHAPE.AREA": 383259667488.688,
+            "SHAPE.LEN": 6880770.47555158
           }
         ],
         "points_ok": 1,
@@ -263,37 +263,37 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 3,
+            "OBJECTID": 2,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795392000000,
+            "FECHA": 1795478400000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
+            "RESPONS": "GLIMAY",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1158750217066.88,
-            "SHAPE.LEN": 12397987.0407138
+            "SHAPE.AREA": 635315539752.791,
+            "SHAPE.LEN": 7710231.35178174
           },
           {
-            "OBJECTID": 3,
+            "OBJECTID": 2,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795392000000,
+            "FECHA": 1795478400000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
+            "RESPONS": "GLIMAY",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1158750217066.88,
-            "SHAPE.LEN": 12397987.0407138
+            "SHAPE.AREA": 635315539752.791,
+            "SHAPE.LEN": 7710231.35178174
           },
           {
-            "OBJECTID": 3,
+            "OBJECTID": 2,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795392000000,
+            "FECHA": 1795478400000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-            "RECOMENDAC": "Revisar procedimientos de emergencia. Evitar actividades en áreas expuestas al impacto de activacion de quebradas. Recomendar proteger bienes y viviendas. Estar atentos a la información oficial y seguir instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
+            "RESPONS": "GLIMAY",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 1158750217066.88,
-            "SHAPE.LEN": 12397987.0407138
+            "SHAPE.AREA": 635315539752.791,
+            "SHAPE.LEN": 7710231.35178174
           }
         ],
         "points_ok": 3,
