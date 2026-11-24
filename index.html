@@ -25,20 +25,41 @@ const REGION={"Piura":["PIURA"],"Chiclayo":["LAMBAYEQUE"],"Trujillo":["LA LIBERT
 const WEATHER_POINTS={"Piura":[-5.19,-80.63],"Chiclayo":[-6.77,-79.84],"Trujillo":[-8.11,-79.03],"Norte Chico":[-11.11,-77.61],"Sur Chico":[-13.08,-76.38],"Lima Norte y Sur":[-12.05,-77.04],"Cusco":[-13.52,-71.97],"Arequipa":[-16.40,-71.54],"Huancayo":[-12.07,-75.21],"Oriente":[-8.38,-74.55]};
 let liveWeather={},weatherChecked="",weatherError="";
 async function loadLiveWeather(){
- const entries=Object.entries(WEATHER_POINTS);
- const u="https://api.open-meteo.com/v1/forecast?latitude="+entries.map(e=>e[1][0]).join(",")+"&longitude="+entries.map(e=>e[1][1]).join(",")+"&current=temperature_2m,precipitation,wind_gusts_10m,weather_code&timezone=America%2FLima";
+ const entries=Object.entries(WEATHER_POINTS),next={},errors=[];
+ const fields="temperature_2m,precipitation,wind_gusts_10m,weather_code";
+ async function get(url){
+  const response=await fetch(url,{cache:"no-store",signal:AbortSignal.timeout(15000)});
+  if(!response.ok)throw Error("HTTP "+response.status);
+  return response.json();
+ }
+ function accept(name,coord,row){
+  const x=row?.current;
+  if(!x?.time||!["precipitation","wind_gusts_10m","temperature_2m","weather_code"].every(k=>typeof x[k]==="number"&&Number.isFinite(x[k])))throw Error("Datos incompletos");
+  const age=Date.now()-Date.parse(x.time+"-05:00");
+  if(!Number.isFinite(age)||age>7200000||age< -3600000)throw Error("Datos fuera de vigencia");
+  const rain=x.precipitation,gust=x.wind_gusts_10m,temp=x.temperature_2m,code=x.weather_code;
+  const level=rain>=15||gust>=75||[95,96,99].includes(code)?"ROJO":rain>=7||gust>=55||temp>=38?"NARANJA":rain>=1||gust>=35||temp>=33?"AMARILLO":"";
+  next[name]={level,x,coord};
+ }
+ const base="https://api.open-meteo.com/v1/forecast?";
+ const suffix="&current="+fields+"&timezone=America%2FLima";
  try{
-  const response=await fetch(u,{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);
-  const result=await response.json(),rows=Array.isArray(result)?result:[result];if(rows.length!==entries.length)throw Error("Datos incompletos");
-  const next={};entries.forEach(([name,coord],i)=>{const x=rows[i].current;if(!x||!x.time)return;
-   if(!["precipitation","wind_gusts_10m","temperature_2m","weather_code"].every(k=>typeof x[k]==="number"&&Number.isFinite(x[k])))return;
-   const rain=x.precipitation,gust=x.wind_gusts_10m,temp=x.temperature_2m,code=x.weather_code;
-   const level=rain>=15||gust>=75||[95,96,99].includes(code)?"ROJO":rain>=7||gust>=55||temp>=38?"NARANJA":rain>=1||gust>=35||temp>=33?"AMARILLO":"";
-   next[name]={level,x,coord};});
-  if(Object.keys(next).length!==entries.length)throw Error("Datos parciales");
-  liveWeather=next;weatherChecked=new Date().toISOString();weatherError="";
- }catch(e){liveWeather={};weatherError=String(e.message||e)}
+  const result=await get(base+"latitude="+entries.map(e=>e[1][0]).join(",")+"&longitude="+entries.map(e=>e[1][1]).join(",")+suffix);
+  const rows=Array.isArray(result)?result:[result];
+  entries.forEach(([name,coord],i)=>{try{accept(name,coord,rows[i])}catch(e){errors.push(name+": "+e.message)}});
+ }catch(e){errors.push("Consulta conjunta: "+e.message)}
+ const missing=entries.filter(([name])=>!next[name]);
+ for(let i=0;i<missing.length;i+=3){
+  await Promise.all(missing.slice(i,i+3).map(async ([name,coord])=>{
+   try{accept(name,coord,await get(base+"latitude="+coord[0]+"&longitude="+coord[1]+suffix))}
+   catch(e){errors.push(name+": "+e.message)}
+  }));
+ }
+ liveWeather=next;
+ weatherChecked=Object.keys(next).length?new Date().toISOString():"";
+ weatherError=Object.keys(next).length===entries.length?"":errors.join("; ");
 }
+
 const FIELD_URL="https://ioaclvwgqdpvrpbznrag.supabase.co/rest/v1/";const FIELD_KEY="sb_publishable_WO2Wz8bhGtggZhJ0z4tGSw_aYAenFlo";let fieldAlerts=[];let roadsData={reported_incidents:[],data_status:"unverified"};let current=FIXED;let feedOk=false;let stamp="";let geo={};let geoStatus="";const nowPeru=()=>new Date().toLocaleDateString("en-CA",{timeZone:"America/Lima"});const clean=s=>String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));function render(){
 const today=nowPeru();document.getElementById("headline").textContent="HSE · "+new Date().toLocaleDateString("es-PE",{timeZone:"America/Lima",dateStyle:"full"})+" · Condiciones recientes modeladas; avisos nacionales no verificados";
 const rank={ROJO:3,NARANJA:2,AMARILLO:1};const classes={ROJO:"red",NARANJA:"orange",AMARILLO:"yellow",VERDE:"green"};
@@ -147,7 +168,7 @@ async function load(){
  await Promise.all([loadLiveWeather(),loadSenamhiMonitor()]);try{const vr=await fetch("./vias.json?t="+Date.now(),{cache:"no-store"});if(vr.ok){const v=await vr.json();if(v&&Array.isArray(v.reported_incidents))roadsData=v;}}catch(e){console.warn("Vías sin actualización",e)}try{const r=await fetch("./avisos.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error("No disponible");const d=await r.json();stamp=d.checked_at||"";feedOk=(d.source_status==="parsed"||d.source_status==="partial");geo=d.zones||{};geoStatus=d.source_status||"";current=Array.isArray(d.advisories)?d.advisories.map(a=>({...a,number:Number(a.number)})):[];document.getElementById("last").textContent="Modelo meteorológico: "+(weatherChecked?new Date(weatherChecked).toLocaleString("es-PE",{timeZone:"America/Lima"}):"no disponible")+" · Avisos oficiales: "+(stamp?new Date(stamp).toLocaleString("es-PE",{timeZone:"America/Lima"}):"pendiente")+" · "+(feedOk?"Capa de lluvia consultada; avisos nacionales no verificados":("Sin datos nuevos: "+(d.note||"consulta no validada")));}catch(e){feedOk=false;document.getElementById("last").textContent="Sin conexión automática confirmada: "+e.message}render();renderRoads();
  const sen=senamhiMonitor||{};
  const detail=sen.status==="source_reachable"?"Capas SENAMHI/INDECI consultadas; avisos nacionales pendientes de validar":(sen.message||"SENAMHI no verificado");
- state.textContent="Revisión terminada · "+detail;
+ state.textContent="Open-Meteo: "+Object.keys(liveWeather).length+"/"+Object.keys(WEATHER_POINTS).length+" zonas · "+detail+(weatherError?" · "+weatherError:"");
  document.getElementById("last").textContent+=" · SENAMHI: "+detail;
  }finally{button.disabled=false;refreshing=false}
 }
