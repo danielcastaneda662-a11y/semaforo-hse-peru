@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-25T03:38:57.482718-05:00",
+  "checked_at": "2026-11-25T14:19:14.248801-05:00",
   "source": "https://geosinpad.indeci.gob.pe/indeci/rest/services/Ent_Tecnico_Cientificas/SENAMHI/MapServer/5",
   "source_status": "parsed",
   "advisories": [],
@@ -7,8 +7,8 @@
     "Piura": {
       "rain24h": [
         {
-          "level": "AMARILLO",
-          "date": "2026-11-23T19:00:00-05:00",
+          "level": "NARANJA",
+          "date": "2026-11-24T19:00:00-05:00",
           "description": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
           "recommendation": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes."
         }
@@ -22,7 +22,14 @@
       "verified_points": 2
     },
     "Trujillo": {
-      "rain24h": [],
+      "rain24h": [
+        {
+          "level": "AMARILLO",
+          "date": "2026-11-24T19:00:00-05:00",
+          "description": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
+          "recommendation": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes."
+        }
+      ],
       "checked_points": 1,
       "verified_points": 3
     },
@@ -52,19 +59,19 @@
       "verified_points": 11
     },
     "Huancayo": {
-      "rain24h": [
-        {
-          "level": "AMARILLO",
-          "date": "2026-11-23T19:00:00-05:00",
-          "description": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-          "recommendation": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes."
-        }
-      ],
+      "rain24h": [],
       "checked_points": 1,
       "verified_points": 12
     },
     "Oriente": {
-      "rain24h": [],
+      "rain24h": [
+        {
+          "level": "AMARILLO",
+          "date": "2026-11-24T19:00:00-05:00",
+          "description": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
+          "recommendation": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes."
+        }
+      ],
       "checked_points": 3,
       "verified_points": 15
     }
