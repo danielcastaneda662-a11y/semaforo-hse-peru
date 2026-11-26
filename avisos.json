@@ -1,25 +1,18 @@
 {
-  "checked_at": "2026-11-25T14:19:14.248801-05:00",
+  "checked_at": "2026-11-25T22:35:55.747839-05:00",
   "source": "https://geosinpad.indeci.gob.pe/indeci/rest/services/Ent_Tecnico_Cientificas/SENAMHI/MapServer/5",
-  "source_status": "parsed",
+  "source_status": "partial",
   "advisories": [],
   "zones": {
     "Piura": {
-      "rain24h": [
-        {
-          "level": "NARANJA",
-          "date": "2026-11-24T19:00:00-05:00",
-          "description": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
-          "recommendation": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes."
-        }
-      ],
+      "rain24h": [],
       "checked_points": 1,
-      "verified_points": 1
+      "verified_points": 0
     },
     "Chiclayo": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 2
+      "verified_points": 0
     },
     "Trujillo": {
       "rain24h": [
@@ -31,37 +24,37 @@
         }
       ],
       "checked_points": 1,
-      "verified_points": 3
+      "verified_points": 1
     },
     "Norte Chico": {
       "rain24h": [],
       "checked_points": 2,
-      "verified_points": 5
+      "verified_points": 1
     },
     "Sur Chico": {
       "rain24h": [],
       "checked_points": 2,
-      "verified_points": 7
+      "verified_points": 2
     },
     "Lima Norte y Sur": {
       "rain24h": [],
       "checked_points": 2,
-      "verified_points": 9
+      "verified_points": 2
     },
     "Cusco": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 10
+      "verified_points": 2
     },
     "Arequipa": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 11
+      "verified_points": 3
     },
     "Huancayo": {
       "rain24h": [],
       "checked_points": 1,
-      "verified_points": 12
+      "verified_points": 3
     },
     "Oriente": {
       "rain24h": [
@@ -73,8 +66,21 @@
         }
       ],
       "checked_points": 3,
-      "verified_points": 15
+      "verified_points": 4
     }
   },
-  "note": "Consulta de capa SENAMHI/INDECI de precipitaciones 24h: 15 de 15 puntos respondieron. No certifica ausencia de otros avisos."
+  "note": "Consulta de capa SENAMHI/INDECI de precipitaciones 24h: 4 de 15 puntos respondieron. No certifica ausencia de otros avisos.",
+  "errors": [
+    "Piura: ValueError: {'code': 400, 'message': 'Failed to execute query.', 'details': []}",
+    "Chiclayo: ValueError: {'code': 400, 'message': 'Failed to execute query.', 'details': []}",
+    "Norte Chico: ValueError: {'code': 400, 'message': 'Failed to execute query.', 'details': []}",
+    "Norte Chico: ValueError: {'code': 400, 'message': 'Failed to execute query.', 'details': []}",
+    "Sur Chico: ValueError: {'code': 400, 'message': 'Failed to execute query.', 'details': []}",
+    "Lima Norte y Sur: ValueError: {'code': 400, 'message': 'Failed to execute query.', 'details': []}",
+    "Lima Norte y Sur: ValueError: {'code': 400, 'message': 'Failed to execute query.', 'details': []}",
+    "Cusco: ValueError: {'code': 400, 'message': 'Failed to execute query.', 'details': []}",
+    "Huancayo: ValueError: {'code': 400, 'message': 'Failed to execute query.', 'details': []}",
+    "Oriente: ValueError: {'code': 400, 'message': 'Failed to execute query.', 'details': []}",
+    "Oriente: ValueError: {'code': 400, 'message': 'Failed to execute query.', 'details': []}"
+  ]
 }
