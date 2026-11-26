@@ -1,6 +1,6 @@
 {
   "source": "https://geosinpad.indeci.gob.pe/indeci/rest/services/Ent_Tecnico_Cientificas/SENAMHI/MapServer",
-  "checked_at_utc": "2026-11-26T08:51:20.677271+00:00",
+  "checked_at_utc": "2026-11-26T18:57:28.077284+00:00",
   "status": "source_reachable",
   "message": "Capas oficiales consultadas; avisos nacionales todavía no verificados.",
   "scope": "Capas geográficas 24h; NO inventario nacional de avisos.",
@@ -14,15 +14,15 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 4,
+            "OBJECTID": 9,
             "NIVEL": "Nivel 3",
-            "FECHA": 1795564800000,
+            "FECHA": 1795651200000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
             "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RESPONS": "NGOICOCHEA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 67683201805.8383,
-            "SHAPE.LEN": 2228864.69604864
+            "SHAPE.AREA": 208390852591.724,
+            "SHAPE.LEN": 4395405.18384931
           }
         ],
         "points_ok": 1,
@@ -38,15 +38,15 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 11,
+            "OBJECTID": 2,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795564800000,
+            "FECHA": 1795651200000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
             "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RESPONS": "NGOICOCHEA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 13115556259.2807,
-            "SHAPE.LEN": 656044.865824551
+            "SHAPE.AREA": 5829166894.71021,
+            "SHAPE.LEN": 525076.838026076
           }
         ],
         "points_ok": 1,
@@ -62,15 +62,15 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 7,
+            "OBJECTID": 1,
             "NIVEL": "Nivel 2",
-            "FECHA": 1795564800000,
+            "FECHA": 1795651200000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
             "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RESPONS": "NGOICOCHEA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 361139088551.519,
-            "SHAPE.LEN": 8702264.50637835
+            "SHAPE.AREA": 749253340709.906,
+            "SHAPE.LEN": 13891472.5232375
           }
         ],
         "points_ok": 1,
@@ -86,26 +86,26 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 3,
+            "OBJECTID": 7,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795564800000,
+            "FECHA": 1795651200000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
             "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RESPONS": "NGOICOCHEA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 202202277281.794,
-            "SHAPE.LEN": 4031222.8004774
+            "SHAPE.AREA": 152199104889.65,
+            "SHAPE.LEN": 3828679.36249932
           },
           {
-            "OBJECTID": 3,
+            "OBJECTID": 7,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795564800000,
+            "FECHA": 1795651200000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
             "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RESPONS": "NGOICOCHEA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 202202277281.794,
-            "SHAPE.LEN": 4031222.8004774
+            "SHAPE.AREA": 152199104889.65,
+            "SHAPE.LEN": 3828679.36249932
           }
         ],
         "points_ok": 2,
@@ -121,26 +121,26 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 3,
+            "OBJECTID": 7,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795564800000,
+            "FECHA": 1795651200000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
             "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RESPONS": "NGOICOCHEA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 202202277281.794,
-            "SHAPE.LEN": 4031222.8004774
+            "SHAPE.AREA": 152199104889.65,
+            "SHAPE.LEN": 3828679.36249932
           },
           {
-            "OBJECTID": 3,
+            "OBJECTID": 7,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795564800000,
+            "FECHA": 1795651200000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
             "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RESPONS": "NGOICOCHEA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 202202277281.794,
-            "SHAPE.LEN": 4031222.8004774
+            "SHAPE.AREA": 152199104889.65,
+            "SHAPE.LEN": 3828679.36249932
           }
         ],
         "points_ok": 2,
@@ -156,26 +156,26 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 3,
+            "OBJECTID": 7,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795564800000,
+            "FECHA": 1795651200000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
             "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RESPONS": "NGOICOCHEA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 202202277281.794,
-            "SHAPE.LEN": 4031222.8004774
+            "SHAPE.AREA": 152199104889.65,
+            "SHAPE.LEN": 3828679.36249932
           },
           {
-            "OBJECTID": 3,
+            "OBJECTID": 7,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795564800000,
+            "FECHA": 1795651200000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
             "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RESPONS": "NGOICOCHEA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 202202277281.794,
-            "SHAPE.LEN": 4031222.8004774
+            "SHAPE.AREA": 152199104889.65,
+            "SHAPE.LEN": 3828679.36249932
           }
         ],
         "points_ok": 2,
@@ -191,15 +191,15 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 9,
+            "OBJECTID": 4,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795564800000,
+            "FECHA": 1795651200000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
             "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RESPONS": "NGOICOCHEA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 122650453362.67,
-            "SHAPE.LEN": 2689816.41334501
+            "SHAPE.AREA": 101166424973.87,
+            "SHAPE.LEN": 2633752.76307774
           }
         ],
         "points_ok": 1,
@@ -215,15 +215,15 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 3,
+            "OBJECTID": 7,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795564800000,
+            "FECHA": 1795651200000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
             "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RESPONS": "NGOICOCHEA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 202202277281.794,
-            "SHAPE.LEN": 4031222.8004774
+            "SHAPE.AREA": 152199104889.65,
+            "SHAPE.LEN": 3828679.36249932
           }
         ],
         "points_ok": 1,
@@ -239,15 +239,15 @@
       "precipitacion_24h": {
         "features": [
           {
-            "OBJECTID": 9,
+            "OBJECTID": 4,
             "NIVEL": "Nivel 1",
-            "FECHA": 1795564800000,
+            "FECHA": 1795651200000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
             "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RESPONS": "NGOICOCHEA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 122650453362.67,
-            "SHAPE.LEN": 2689816.41334501
+            "SHAPE.AREA": 101166424973.87,
+            "SHAPE.LEN": 2633752.76307774
           }
         ],
         "points_ok": 1,
@@ -264,36 +264,36 @@
         "features": [
           {
             "OBJECTID": 1,
-            "NIVEL": "Nivel 1",
-            "FECHA": 1795564800000,
+            "NIVEL": "Nivel 2",
+            "FECHA": 1795651200000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
             "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RESPONS": "NGOICOCHEA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 495442705868.915,
-            "SHAPE.LEN": 6638457.60181589
+            "SHAPE.AREA": 749253340709.906,
+            "SHAPE.LEN": 13891472.5232375
           },
           {
             "OBJECTID": 1,
-            "NIVEL": "Nivel 1",
-            "FECHA": 1795564800000,
+            "NIVEL": "Nivel 2",
+            "FECHA": 1795651200000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
             "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RESPONS": "NGOICOCHEA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 495442705868.915,
-            "SHAPE.LEN": 6638457.60181589
+            "SHAPE.AREA": 749253340709.906,
+            "SHAPE.LEN": 13891472.5232375
           },
           {
-            "OBJECTID": 7,
-            "NIVEL": "Nivel 2",
-            "FECHA": 1795564800000,
+            "OBJECTID": 9,
+            "NIVEL": "Nivel 3",
+            "FECHA": 1795651200000,
             "DESCRIPCIO": "Ante el pronóstico de lluvias es probable la activación de quebradas de magnitud moderada en las zonas identificadas o alrededor de las mismas, con posible afectación de la población bajo la influencia de las quebradas.",
             "RECOMENDAC": "Estar atentos a la información oficial y seguir las instrucciones de las autoridades competentes.",
-            "RESPONS": "JMORA",
+            "RESPONS": "NGOICOCHEA",
             "FECHA_ETL": null,
-            "SHAPE.AREA": 361139088551.519,
-            "SHAPE.LEN": 8702264.50637835
+            "SHAPE.AREA": 208390852591.724,
+            "SHAPE.LEN": 4395405.18384931
           }
         ],
         "points_ok": 3,
