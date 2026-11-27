@@ -74,5 +74,27 @@ def main():
     OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(result["status"], result["layers"])
 
+
+def weather_snapshot():
+    from concurrent.futures import ThreadPoolExecutor
+    def fetch_zone(item):
+        name, coords = item
+        lon, lat = coords[0]
+        params = urllib.parse.urlencode({"latitude":lat,"longitude":lon,"current":"temperature_2m,precipitation,wind_gusts_10m,weather_code","timezone":"America/Lima"})
+        try:
+            with urllib.request.urlopen("https://api.open-meteo.com/v1/forecast?"+params, timeout=15) as response:
+                x = json.load(response)["current"]
+            if not all(isinstance(x.get(k),(int,float)) for k in ("temperature_2m","precipitation","wind_gusts_10m","weather_code")):
+                raise ValueError("Incomplete weather")
+            return name, x
+        except Exception:
+            return name, None
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        zones = dict(pool.map(fetch_zone, POINTS.items()))
+    path = pathlib.Path("data/weather.json")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps({"checked_at_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),"zones":zones},ensure_ascii=False),encoding="utf-8")
+
 if __name__ == "__main__":
+    weather_snapshot()
     main()
