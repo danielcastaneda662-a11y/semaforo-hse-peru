@@ -41,6 +41,11 @@ async function loadLiveWeather(){
   const level=rain>=15||gust>=75||[95,96,99].includes(code)?"ROJO":rain>=7||gust>=55||temp>=38?"NARANJA":rain>=1||gust>=35||temp>=33?"AMARILLO":"";
   next[name]={level,x,coord}; liveWeather={...next}; try{render()}catch(e){errors.push("Interfaz: "+e.message)}
  }
+ try{
+ const snapshot=await get("./data/weather.json?t="+Date.now());
+ entries.forEach(([name,coord])=>{try{accept(name,coord,{current:snapshot.zones[name]});next[name].backup=true}catch(e){errors.push(name+" respaldo local: "+e.message)}});
+ }catch(e){errors.push("Respaldo mismo dominio: "+e.message)}
+ if(Object.keys(next).length===entries.length){liveWeather=next;weatherChecked=new Date().toISOString();weatherError="";return;}
  const base="https://api.open-meteo.com/v1/forecast?";
  const suffix="&current="+fields+"&timezone=America%2FLima";
  try{
