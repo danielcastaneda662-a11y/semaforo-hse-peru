@@ -28,18 +28,18 @@ async function loadLiveWeather(){
  const entries=Object.entries(WEATHER_POINTS),next={},errors=[];
  const fields="temperature_2m,precipitation,wind_gusts_10m,weather_code";
  async function get(url){
-  const response=await fetch(url,{cache:"no-store",signal:AbortSignal.timeout(15000)});
+  const response=await fetch(url,{cache:"no-store",signal:typeof AbortSignal.timeout==="function"?AbortSignal.timeout(15000):undefined});
   if(!response.ok)throw Error("HTTP "+response.status);
   return response.json();
  }
  function accept(name,coord,row){
   const x=row?.current;
   if(!x?.time||!["precipitation","wind_gusts_10m","temperature_2m","weather_code"].every(k=>typeof x[k]==="number"&&Number.isFinite(x[k])))throw Error("Datos incompletos");
-  const age=Date.now()-Date.parse(x.time+"-05:00");
+  const age=Date.now()-Date.parse(/(?:Z|[+-]\d\d:\d\d)$/.test(x.time)?x.time:x.time+"-05:00");
   if(!Number.isFinite(age)||age>7200000||age< -3600000)throw Error("Datos fuera de vigencia");
   const rain=x.precipitation,gust=x.wind_gusts_10m,temp=x.temperature_2m,code=x.weather_code;
   const level=rain>=15||gust>=75||[95,96,99].includes(code)?"ROJO":rain>=7||gust>=55||temp>=38?"NARANJA":rain>=1||gust>=35||temp>=33?"AMARILLO":"";
-  next[name]={level,x,coord};
+  next[name]={level,x,coord}; liveWeather={...next}; try{render()}catch(e){errors.push("Interfaz: "+e.message)}
  }
  const base="https://api.open-meteo.com/v1/forecast?";
  const suffix="&current="+fields+"&timezone=America%2FLima";
@@ -174,7 +174,7 @@ async function load(){
  const detail=sen.status==="source_reachable"?"Capas SENAMHI/INDECI consultadas; avisos nacionales pendientes de validar":(sen.message||"SENAMHI no verificado");
  state.textContent="Open-Meteo: "+Object.keys(liveWeather).length+"/"+Object.keys(WEATHER_POINTS).length+" zonas · "+detail+(weatherError?" · "+weatherError:"");
  document.getElementById("last").textContent+=" · SENAMHI: "+detail;
- }finally{button.disabled=false;refreshing=false}
+ }catch(e){state.textContent="Error de actualización: "+String(e.message||e);console.error(e)}finally{button.disabled=false;refreshing=false}
 }
 document.getElementById("reload").onclick=load;function reportRows(){return [...document.querySelectorAll("#body tr")].map(tr=>{const cells=tr.querySelectorAll("td");const status=cells[0]?.querySelector("small");const dot=cells[0]?.querySelector(".light");const color=dot?.classList.contains("red")?"#dc2626":dot?.classList.contains("orange")?"#f59e0b":dot?.classList.contains("yellow")?"#eab308":dot?.classList.contains("green")?"#4eab54":"#aab2c0";return {city:cells[0]?.querySelector("b")?.textContent||"",status:status?.textContent||"",what:cells[1]?.innerText||"",action:cells[2]?.innerText||"",color}})}
 document.getElementById("share").onclick=()=>{const msg="Semáforo HSE Perú · "+new Date().toLocaleDateString("es-PE",{timeZone:"America/Lima"})+"\n"+reportRows().map(r=>r.city+": "+r.status).join("\n")+"\nConsulta el detalle: "+location.href;window.open("https://wa.me/?text="+encodeURIComponent(msg),"_blank")};
@@ -183,5 +183,5 @@ document.getElementById("png").onclick=()=>{const rows=reportRows();const rowH=1
 x.fillStyle="#203b67";x.font="bold 19px Arial";x.fillText("CIUDAD / NIVEL SST",40,185);x.fillText("QUÉ ESTÁ PASANDO",420,185);x.fillText("QUÉ HACER",1050,185);
 rows.forEach((r,i)=>{const y=205+i*rowH;x.fillStyle=i%2?"#ffffff":"#f1f5fa";x.fillRect(0,y,c.width,rowH);x.fillStyle=r.color;x.beginPath();x.arc(55,y+42,17,0,Math.PI*2);x.fill();x.fillStyle="#172b49";x.font="bold 22px Arial";wrapCanvas(x,r.city,88,y+35,300,28,2);x.font="bold 16px Arial";wrapCanvas(x,r.status,88,y+90,300,24,2);x.font="16px Arial";wrapCanvas(x,r.what,420,y+32,595,23,7);wrapCanvas(x,r.action,1050,y+32,500,23,7);x.strokeStyle="#dbe3ef";x.beginPath();x.moveTo(0,y+rowH);x.lineTo(1600,y+rowH);x.stroke()});
 x.fillStyle="#203b67";x.font="16px Arial";x.fillText("Fuente: avisos SENAMHI / COEN de referencia. Estado de carreteras: consultar SUTRAN / MTC.",35,c.height-55);x.fillText("No interpretar falta de aviso como vía segura. Verificar condiciones antes de cada salida.",35,c.height-27);c.toBlob(blob=>{if(!blob)return;const url=URL.createObjectURL(blob),link=document.createElement("a");link.href=url;link.download="semaforo-hse-peru-"+new Date().toISOString().slice(0,10)+".png";link.click();setTimeout(()=>URL.revokeObjectURL(url),2000)},"image/png")};
-load();loadField();setInterval(load,30*60*1000);setInterval(loadField,60*1000);
+try{render()}catch(e){document.getElementById("refreshState").textContent="Error de interfaz: "+e.message}load();loadField();setInterval(load,30*60*1000);setInterval(loadField,60*1000);
 </script></body></html>
